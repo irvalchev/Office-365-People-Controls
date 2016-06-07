@@ -257,7 +257,7 @@
     };
 
     Office.Controls.Utils.removeClass = function (elem, className) {
-        var regex = new RegExp('( |^)' + className + '( |$)');
+        var regex = new RegExp('(^|\s)' + className + '(?=\s|$)', 'g');
         elem.className = elem.className.replace(regex, ' ').trim();
     };
 
